@@ -1,5 +1,3 @@
-
-
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
@@ -7,16 +5,22 @@ import { bindActionCreators } from 'redux';
 import * as action from '../actions/actions';
 // import ToDoList from "./toDoList";
 
-class App extends Component {
+import { Button,Input } from 'reactstrap';
+import "bootstrap/dist/css/bootstrap.min.css";
 
+class App extends Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
-        var str ="React-App";
+        var str = "React-App";
         console.log("被渲染${str}");
         return (
             <div>
+
                 <hr/>
-                <input type='text'  ref="input"/>
-                <button onClick={(e) => this.handleClick(e) }>add</button>
+                <Input placeholder="基本使用" type='text'  ref="input"/>
+                <Button color="success" onClick={(e) => this.handleClick(e) }>add</Button>
                 <hr/>
 
                 <div>
@@ -30,8 +34,10 @@ class App extends Component {
         );
     }
 
+
     handleClick(e) {
         const node = ReactDOM.findDOMNode(this.refs.input);
+        console.log(node)
         const text = node.value.trim();
         if (!text) return;
         let id = Math.random();
