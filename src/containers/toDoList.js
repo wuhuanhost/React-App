@@ -16,7 +16,6 @@ class ToDoList extends Component {
         )
     }
     
-
 } 
 
 function mapStateToProps(state) {

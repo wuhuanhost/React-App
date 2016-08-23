@@ -1,7 +1,11 @@
+var webpack = require('webpack');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 module.exports = {
     entry: './src/index.js',
     output: {
         path: './dist',
+        publicPath: 'dist/',
         filename: 'app.bundle.js',
     },
     module: {
@@ -9,12 +13,20 @@ module.exports = {
             test: /\.jsx?$/,
             exclude: /node_modules/,
             loader: 'babel',
-        },{
+        }, {
+                test: /\.less$/,
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader")
+
+            }, {
                 test: /\.css$/,
-                loader: "style!css"
+                // loader: "style!css!less"
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader")
             }
         ]
-    }
+    },
+    plugins: [
+        new ExtractTextPlugin("[name].css")
+    ]
 }
 
 

@@ -5,8 +5,13 @@ import { bindActionCreators } from 'redux';
 import * as action from '../actions/actions';
 // import ToDoList from "./toDoList";
 
-import { Button,Input } from 'reactstrap';
-import "bootstrap/dist/css/bootstrap.min.css";
+import { Button, Input  } from 'antd';
+//按需引入antd的样式文件 
+import "antd/lib/button/style/index.less";
+import "antd/lib/input/style/index.less";
+// 引入antd的所有样式文件
+// import "antd/dist/antd.less"
+
 
 class App extends Component {
     constructor(props) {
@@ -17,15 +22,13 @@ class App extends Component {
         console.log("被渲染${str}");
         return (
             <div>
-
                 <hr/>
                 <Input placeholder="基本使用" type='text'  ref="input"/>
-                <Button color="success" onClick={(e) => this.handleClick(e) }>add</Button>
+                <Button type="primary" onClick={(e) => this.handleClick(e) }>add</Button>
                 <hr/>
-
                 <div>
                     {
-                        this.props.items.map(function(item) {
+                        this.props.items.map(function (item) {
                             return <div className="item" key={item.ids}>{item.name}</div>
                         })
                     }
@@ -33,7 +36,6 @@ class App extends Component {
             </div>
         );
     }
-
 
     handleClick(e) {
         const node = ReactDOM.findDOMNode(this.refs.input);
