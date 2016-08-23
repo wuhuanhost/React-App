@@ -1,3 +1,4 @@
 node_modules/
 参考项目/
 dist/
+npm-debug.log

@@ -4,12 +4,14 @@
   "description": "react练习",
   "main": "index.js",
   "scripts": {
-    "dev": "browser-sync start --server --files *.*"
+    "dev": "browser-sync start --server --files *.*",
+    "tests": "karma start karma.config.js"
   },
   "author": "Dreamer.wuhuan",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.13.2",
+    "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.4",
     "babel-plugin-antd": "^0.5.1",
     "babel-preset-es2015": "^6.13.2",
@@ -20,6 +22,10 @@
     "eslint": "^3.3.1",
     "eslint-plugin-react": "^6.1.2",
     "extract-text-webpack-plugin": "^1.0.1",
+    "jasmine-core": "^2.4.1",
+    "json-loader": "^0.5.4",
+    "karma": "^1.2.0",
+    "karma-jasmine": "^1.0.2",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
     "react-addons-transition-group": "^15.3.1",
