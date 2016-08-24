@@ -3,7 +3,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: {
-        main: './src/index.js',
+        app: './src/index.js',
         vendor: ['react', 'react-dom', 'react-redux', 'redux']
     },
     output: {
