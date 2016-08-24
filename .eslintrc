@@ -30,8 +30,8 @@
     "camelcase": 2,
     // 缩进
     "indent": [
-      2,
-      2,
+      "error",
+      4,
       {
         "SwitchCase": 1
       }

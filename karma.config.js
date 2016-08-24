@@ -11,14 +11,14 @@ module.exports = function(config) {
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     //测试框架
-	frameworks: ['jasmine'],
+	frameworks: ['mocha','chai'],
 
 
     // list of files / patterns to load in the browser
 	//测试时候需要加载的js文件
     files: [
-      'tests/**/*.test.js',
-	  'tests/**/*.js',	
+      'test/**/*.test.js',
+	  'test/**/*.js',
     ],
 
 
@@ -40,12 +40,12 @@ module.exports = function(config) {
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
     //reporters: ['progress'],
 	reporters: ['progress','coverage'],//报表列表
-    
-	preprocessors : {'tests/*.js': 'coverage'},//预处理器
+
+	preprocessors : {'test/*.js': 'coverage'},//预处理器
 	//打印报表
 	coverageReporter: {
 		type : 'html',
-		dir : 'logs/coverage/'   //报表目录
+		dir : 'logs/coverage'   //报表目录
 	},
 
     // web server port
@@ -67,7 +67,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    
+
 	browsers: ['Chrome'],
 
 
