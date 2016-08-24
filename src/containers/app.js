@@ -13,7 +13,7 @@ import 'antd/lib/input/style/index.less';
 // import "antd/dist/antd.less"
 
 // 加载json数据
-import Person from '../data/person.json';
+import Person from '../../api/person.json';
 
 class App extends Component {
     constructor(props) {
