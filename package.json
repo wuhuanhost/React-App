@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "react练习",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
   "scripts": {
     "dev": "browser-sync start --server --files *.*",
-    "tests": "karma start karma.config.js"
+    "test": "karma start karma.config.js"
   },
   "author": "Dreamer.wuhuan",
   "license": "MIT",
