@@ -10,17 +10,17 @@
     + img               图片目录
     + css               css样式
     + view              html模板目录 
-    ~ index.js          应用主文件
+    + index.js          应用主文件
 + test                  测试文件目录     
-~ package.json          npm配置文件
-~ webpack.config.js     webpack配置文件
-~ karma.config.js       karma测试工具配置文件
-~ gulpfile.js           gulp配置文件
-~ .babelrc              babel配置文件
-~ .editorconfig         编辑器格式配置文件
-~ .eslintrc             js代码检验工具
-~ .eslintignore         eslint不需要检验的目录
-~ .gitignore            git排除的目录  
++ package.json          npm配置文件
++ webpack.config.js     webpack配置文件
++ karma.config.js       karma测试工具配置文件
++ gulpfile.js           gulp配置文件
++ .babelrc              babel配置文件
++ .editorconfig         编辑器格式配置文件
++ .eslintrc             js代码检验工具
++ .eslintignore         eslint不需要检验的目录
++ .gitignore            git排除的目录  
 
  
 
