@@ -15,6 +15,7 @@ import 'antd/lib/input/style/index.less';
 // 加载json数据
 import Person from '../../api/person.json';
 
+import 'styles/main.css';
 
 class App extends Component {
     constructor(props) {
@@ -30,7 +31,7 @@ class App extends Component {
                 <Input placeholder="基本使用" type="text"  ref="input"/>
                 <Button type="primary" onClick={(e) => this.handleClick(e) }>add</Button>
                 <hr/>
-                <img src={require('../img/weixin.jpg')}/>
+                <img src={require('../images/weixin.jpg')}/>
                 <div>
                     {
                         this.props.items.map(function (item) {
