@@ -7,8 +7,8 @@
     + containers        组件容器
     + components        组件
     + reduces           action处理器
-    + img               图片目录
-    + css               css样式
+    + images            图片目录
+    + styles            css样式
     + view              html模板目录 
     + index.js          应用主文件
 + test                  测试文件目录     
