@@ -48,7 +48,7 @@ module.exports = {
             except: ['$super', '$', 'exports', 'require']	//排除关键字
         }),
         new HtmlWebpackPlugin({//根据模板插入css/js等生成最终HTML
-            title:'React-App',
+            title: 'React-App',
             favicon: './src/img/favicon.ico', //favicon路径
             filename: '/index.html',	//生成的html存放路径，相对于 path
             template: './src/view/index.html',	//html模板路径
