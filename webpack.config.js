@@ -9,9 +9,9 @@ module.exports = {
     },
     output: {//输出文件
         path: './dist',
-        publicPath: 'dist/',
-        filename: 'app.bundle.js',
-        chunkFilename: "app.bundle.js"
+        publicPath: 'http://localhost:9696/',
+        filename: 'js/app.bundle.js',
+        chunkFilename: "js/app.bundle.js"
     },
     module: {
         loaders: [//加载器
@@ -39,7 +39,7 @@ module.exports = {
         // css打包成独立文件
         new ExtractTextPlugin("css/[name].css"),
         //entry.venders中配置的依赖包，打包成vender.js
-        new webpack.optimize.CommonsChunkPlugin('vendors', 'vendor.js'),
+        new webpack.optimize.CommonsChunkPlugin('vendors', 'js/vendor.js'),
         // 压缩代码
         new webpack.optimize.UglifyJsPlugin({
             compress: {
@@ -50,7 +50,7 @@ module.exports = {
         new HtmlWebpackPlugin({//根据模板插入css/js等生成最终HTML
             title:'React-App',
             favicon: './src/img/favicon.ico', //favicon路径
-            filename: '/view/index.html',	//生成的html存放路径，相对于 path
+            filename: '/index.html',	//生成的html存放路径，相对于 path
             template: './src/view/index.html',	//html模板路径
             inject: true,	//允许插件修改哪些内容，包括head与body
             hash: false,	//为静态资源生成hash值
