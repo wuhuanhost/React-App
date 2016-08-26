@@ -7,8 +7,8 @@ import * as action from '../actions/actions';
 
 import { Button, Input  } from 'antd';
 //按需引入antd的样式文件
-import 'antd/lib/button/style/index.less';
-import 'antd/lib/input/style/index.less';
+// import 'antd/lib/button/style/index.less';
+// import 'antd/lib/input/style/index.less';
 // 引入antd的所有样式文件
 // import "antd/dist/antd.less"
 
@@ -16,6 +16,7 @@ import 'antd/lib/input/style/index.less';
 import Person from '../../api/person.json';
 
 import 'styles/main.css';
+import 'styles/index.scss';
 
 class App extends Component {
     constructor(props) {

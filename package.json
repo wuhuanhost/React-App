@@ -9,7 +9,8 @@
   },
   "scripts": {
     "dev": "browser-sync start --server --files *.*",
-    "test": "karma start karma.config.js"
+    "test": "karma start karma.config.js",
+    "webpack": "webpack -p --progress --colors"
   },
   "author": "Dreamer.wuhuan",
   "license": "MIT",
@@ -42,10 +43,12 @@
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
     "mocha": "^3.0.2",
+    "node-sass": "^3.8.0",
     "react-addons-transition-group": "^15.3.1",
     "redux-devtools": "^3.3.1",
     "redux-devtools-dock-monitor": "^1.1.1",
     "redux-devtools-log-monitor": "^1.0.11",
+    "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.2"

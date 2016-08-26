@@ -17,7 +17,9 @@ module.exports = {
         color: true,
         reasons: false
     },
+    // 生成sourcemap
     devtool: ['sourcemap'],
+    //文件路径的指向
     resolve: {
         extensions: ['', '.js', 'jsx'],
         //配置别名,在项目中可以缩短引用资源require('styles/main.css')相当于require('src/styles/main.css')
@@ -33,7 +35,7 @@ module.exports = {
         }],
         loaders: [//加载器
             {
-                test: /\.jsx?$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 loader: 'babel',
             }, {
@@ -44,11 +46,14 @@ module.exports = {
                 test: /\.css$/,
                 // loader: "style!css!less"
                 loader: ExtractTextPlugin.extract("style-loader", "css-loader")
-            }, {
-                test: /\.json/, loader: "json"
+            }, {//加载json
+                test: /\.json$/, loader: "json"
             }, {
                 test: /\.(png|jpg)$/,
                 loader: 'url?limit=8192&name=images/[name].[ext]'
+            }, {//处理sass
+                test: /\.scss$/,
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")
             }
         ]
     },

@@ -12,7 +12,7 @@
 // export default actions;
 
 export let addItem =(id,text)=>({
-    type:"ADD_ITEM",
+    type:'ADD_ITEM',
     id,
     text
 });
