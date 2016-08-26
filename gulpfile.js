@@ -18,8 +18,6 @@ gulp.task('clean', function () {
 });
 
 
-
-
 /**
  * 运行测试
  */
@@ -29,7 +27,6 @@ gulp.task('test', function (done) {
         singleRun: true
     }, done).start();
 });
-
 
 
 // dev任务
