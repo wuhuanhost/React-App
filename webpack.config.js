@@ -4,22 +4,23 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {//入口文件
-        app: './src/index.js',
+        app: __dirname + '/src/index.js',
         vendors: ['react', 'react-dom', 'react-redux', 'redux']
     },
     output: {//输出文件
-        path: './dist',
+        path: __dirname + '/dist',
         publicPath: 'http://localhost:9696/',
         filename: 'assets/app.bundle.js',
         chunkFilename: "assets/app.bundle.js"
     },
     stats: {//控制台打印配置
         color: true,
-        reasons: true
+        reasons: false
     },
     devtool: ['sourcemap'],
     resolve: {
         extensions: ['', '.js', 'jsx'],
+        //配置别名,在项目中可以缩短引用资源require('styles/main.css')相当于require('src/styles/main.css')
         alias: {
             styles: __dirname + "/src/styles"
         }
@@ -65,9 +66,9 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({//根据模板插入css/js等生成最终HTML
             title: 'React-App',
-            favicon: './src/images/favicon.ico', //favicon路径
-            filename: '/index.html',	//生成的html存放路径，相对于 path
-            template: './src/view/index.html',	//html模板路径
+            favicon: __dirname + '/src/images/favicon.ico', //favicon路径
+            filename: 'index.html',	//生成的html存放路径，相对于 path
+            template: __dirname + '/src/view/index.html',	//html模板路径
             inject: true,	//允许插件修改哪些内容，包括head与body
             hash: true,	//为静态资源生成hash值
             minify: {	//压缩HTML文件

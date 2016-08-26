@@ -3,7 +3,9 @@
 var gulp = require('gulp');
 var clean = require('gulp-clean');
 var Server = require('karma').Server;
-
+var gulp_webpack = require('gulp-webpack');
+var webpack = require('webpack');
+var webpack_config = require('./webpack.config.js');
 
 // 默认任务
 gulp.task('default', function () {
@@ -30,10 +32,17 @@ gulp.task('test', function (done) {
 
 
 // dev任务
-gulp.task('build', function () {
+gulp.task('build', ['clean','webpack']);
 
+/**
+ * 调用webpack打包
+ */
+gulp.task('webpack', function () {
+    gulp_webpack(webpack_config, webpack)
+    .pipe(gulp.dest('./dist'));
 
 });
+
 
 
 // 文件监控
