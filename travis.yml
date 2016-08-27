@@ -24,7 +24,7 @@ after_script:
 
 branches:
   only:
-    - gh-pages
+    - master
 env:
  global:
    - GH_REF: git@github.com:wuhuanhost/React-App.git
