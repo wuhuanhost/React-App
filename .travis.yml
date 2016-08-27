@@ -26,6 +26,11 @@ branches:
   only:
     - master
 
+#ª∫¥Ê≈‰÷√
+cache:
+  directories:
+    - node_modules
+
 env:
  global:
    - GH_REF: github.com/wuhuanhost/React-App.git
