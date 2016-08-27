@@ -9,8 +9,8 @@ install:
 #before_script:
  # - npm install -g gulp
 
-# script:
-  # - hexo g
+script:
+  - webpack 
 
 after_script:
   - cd ./dist
