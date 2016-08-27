@@ -1,4 +1,4 @@
-### webpack+react+redux+es6  demo
+### webpack+react+redux+es6  demo   ![build](https://travis-ci.org/wuhuanhost/React-App.svg?branch=master)
 
 + api                   数据接口目录，用json数据模拟
 + logs                  日志目录 
