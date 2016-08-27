@@ -9,7 +9,7 @@ module.exports = {
     },
     output: {//输出文件
         path: __dirname + '/dist',
-        publicPath: 'http://localhost:9696/',
+        publicPath: '',
         filename: 'assets/app.bundle.js',
         chunkFilename: "assets/app.bundle.js"
     },
