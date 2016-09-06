@@ -10,7 +10,8 @@
   "scripts": {
     "dev": "browser-sync start --server --files *.*",
     "test": "karma start karma.config.js",
-    "webpack": "webpack -p --progress --colors"
+    "webpack": "webpack -p --progress --colors",
+    "start":"webpack-dev-server --config webpack.config.js --devtool eval --progress --colors --inline --hot --content-base build"
   },
   "author": "Dreamer.wuhuan",
   "license": "MIT",
@@ -51,7 +52,8 @@
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^1.13.2"
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.1"
   },
   "dependencies": {
     "antd": "^1.10.0",
